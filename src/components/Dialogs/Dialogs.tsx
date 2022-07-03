@@ -19,7 +19,7 @@ export const Dialogs = () => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-
+                <div>ddd</div>
                 <div className={s.dialog + ' ' + s.active}>
                     <div>
                         <DialogItem dialogData={dialogData}/>
