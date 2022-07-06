@@ -3,6 +3,7 @@ import s from './Post.module.css'
 import {message} from "antd";
 
 type PostPropsType = {
+    id:number
     message: string
     likesCount?:number
 }

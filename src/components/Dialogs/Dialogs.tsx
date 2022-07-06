@@ -1,16 +1,33 @@
 import React from 'react';
 import s from './Dialogs.module.css'
 import {DialogItem} from "./DialogIteam/DialogItem";
-import {Messages} from "./Messages";
+import {Messages} from "./Messages/Messages";
+import {DialogItemArrayProps, DialogItemProps, MessagesPropsType} from "../../redux/state";
 
+// type DialogItemProps = {
+//     name: string
+//     id: number
+// }
+// type DialogItemArrayProps = {
+//     dialogData: Array<DialogItemProps>
+// }
+// type MessagesPropsType = {
+//     id: number
+//     message: string
+// }
+//
+// type MessagePropsArray = {
+//     messageData: Array<MessagesPropsType>
+// }
 
-export const Dialogs = () => {
+type PropsType = {
+    dialogData: DialogItemProps[]
+    messageData: MessagesPropsType[]
 
-    let dialogData = [
-        {id:1, name:'Max'},
-        {id:3, name:'Sveta'},
-        {id:4, name:'Tanya'}
-    ]
+}
+
+export const Dialogs = (props: PropsType ) => {
+
     let messageData = [
         {id:1, message:'Hi'},
         {id:2, message:'Privet'},
@@ -22,10 +39,10 @@ export const Dialogs = () => {
                 <div>ddd</div>
                 <div className={s.dialog + ' ' + s.active}>
                     <div>
-                        <DialogItem dialogData={dialogData}/>
+                        <DialogItem dialogData={props.dialogData}/>
                     </div>
                 </div>
-                <Messages messageData={messageData}/>
+                <Messages messageData={props.messageData}/>
 
             </div>
         </div>
