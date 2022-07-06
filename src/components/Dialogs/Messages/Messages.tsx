@@ -1,13 +1,5 @@
 import React from 'react';
-
-type MessagesPropsType = {
-    id: number
-    message: string
-}
-
-type MessagePropsArray = {
-    messageData: Array<MessagesPropsType>
-}
+import {MessagePropsArray} from "../../../redux/state";
 
 export const Messages = (props:MessagePropsArray) => {
     return (
