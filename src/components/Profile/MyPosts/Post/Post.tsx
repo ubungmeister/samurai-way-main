@@ -4,7 +4,7 @@ import {message} from "antd";
 
 type PostPropsType = {
     id:number
-    message: string
+    myPost: string
     likesCount?:number
 }
 
@@ -22,7 +22,7 @@ export const Post = (props:PostArrayPropsType) => {
                     {props.posts.map((el, index)=>{
                         return(
                            <li key={index}>
-                               <div>{el.message}</div>
+                               <div>{el.myPost}</div>
                                <div>likes {el.likesCount}</div>
                            </li>
 

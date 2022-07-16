@@ -1,13 +1,9 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import {DialogItemArrayProps} from "../../../redux/state";
-// type DialogItemProps = {
-//     name: string
-//     id: number
-// }
-// type DialogItemArrayProps = {
-//  dialogData: Array<DialogItemProps>
-// }
+
+//как вообще до этого дошло?
+
 
 export const DialogItem = (props: DialogItemArrayProps) => {
     return (

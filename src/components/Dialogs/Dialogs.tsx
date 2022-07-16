@@ -2,29 +2,15 @@ import React from 'react';
 import s from './Dialogs.module.css'
 import {DialogItem} from "./DialogIteam/DialogItem";
 import {Messages} from "./Messages/Messages";
-import {DialogItemProps, MessagesPropsType} from "../../redux/state";
+import {DialogItemArrayProps, DialogItemProps, MessagePropsArray, MessagesPropsType} from "../../redux/state";
 
-// type DialogItemProps = {
-//     name: string
-//     id: number
-// }
-// type DialogItemArrayProps = {
-//     dialogData: Array<DialogItemProps>
-// }
-// type MessagesPropsType = {
-//     id: number
-//     message: string
-// }
-//
-// type MessagePropsArray = {
-//     messageData: Array<MessagesPropsType>
-// }
-
+// почему в импорте DialogItemProps а в пропсах  DialogItemProps[] и почему я не могу ссылаться на DialogItemArrayProps
 type PropsType = {
-    dialogData: DialogItemProps[]
-    messageData: MessagesPropsType[]
-
+    dialogData: Array<DialogItemProps>
+    messageData: Array<MessagesPropsType>
 }
+
+
 
 export const Dialogs = (props: PropsType ) => {
 
